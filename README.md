@@ -7,6 +7,7 @@ iOS 5 or later
 ARC or MRC
 
 Usage:
+
 1.Purchase：
 
     if (![[IAPAngel shared] canPurchase]){
@@ -23,6 +24,7 @@ Usage:
     }];
 
 2.Restore:
+
     [[IAPAngel shared] restorePurchases:^(NSArray *transactions, NSError *error) {
         if (error){
             ALERT(@"Restore failed!");
@@ -38,7 +40,9 @@ Usage:
     }];
 
 3.Save a transaction for non-consumable product:
+
 - (void)saveTransaction:(SKPaymentTransaction *)transaction;
 
 4.Check a product:
+
 - (BOOL)isPurchasedProduct:(NSString *)productId;
