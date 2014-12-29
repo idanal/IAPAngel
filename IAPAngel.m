@@ -158,7 +158,7 @@
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
 #ifdef DEBUG
-    NSLog(@"Received Products:%@\nInvalid Products:%@",response.products,response.invalidproductIds);
+    NSLog(@"Received Products:%@\nInvalid Products:%@",response.products,response.invalidProductIdentifiers);
 #endif
     if ([response.products count] > 0){
         [self makePayment:[response.products firstObject]];
